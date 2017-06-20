@@ -255,7 +255,7 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
         String[] titles = getOtherButtonTitles();
         if (titles != null) {
             for (int i = 0; i < titles.length; i++) {
-                Button bt = new Button(getActivity());
+                Button bt = new Button(getActivity(), null, android.R.attr.borderlessButtonStyle);
                 bt.setId(CANCEL_BUTTON_ID + i + 1);
                 bt.setOnClickListener(this);
                 bt.setBackgroundDrawable(getOtherButtonBg(titles, i));
@@ -271,7 +271,7 @@ public class ActionSheet extends Fragment implements View.OnClickListener {
                 }
             }
         }
-        Button bt = new Button(getActivity());
+        Button bt = new Button(getActivity(), null, android.R.attr.borderlessButtonStyle);
         bt.getPaint().setFakeBoldText(true);
         bt.setTextSize(TypedValue.COMPLEX_UNIT_PX, mAttrs.actionSheetTextSize);
         bt.setId(ActionSheet.CANCEL_BUTTON_ID);
